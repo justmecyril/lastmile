@@ -145,7 +145,7 @@
             :key="index"
           >
             <div class="flex flex-col flex-2 md:w-1/3">
-              <label for="siteName" class="mb-1 text-sm text-at-indigo-purple"
+              <label for="siteName" class="mb-1 text-sm font-bold text-at-indigo-purple"
                 >Site Name</label
               >
               <input
@@ -157,7 +157,7 @@
               <p v-else>{{ item.siteName }}</p>
             </div>
             <div class="flex flex-col flex-2 ">
-              <label for="contractor" class="mb-1 text-sm text-at-indigo-purple"
+              <label for="contractor" class="mb-1 text-sm font-bold text-at-indigo-purple"
                 >Contractor</label
               >
               <select
@@ -176,7 +176,7 @@
             <div class="flex flex-col flex-2 ">
               <label
                 for="activationDate"
-                class="mb-1 ext-sm text-at-indigo-purple"
+                class="mb-1 text-sm font-bold text-at-indigo-purple"
                 >Activation Date</label
               >
               <input
@@ -192,7 +192,7 @@
               <p v-else>{{ item.activationDate }}</p>
             </div>
             <div class="flex flex-col flex-2 ">
-              <label for="siteCode" class="mb-1 text-sm text-at-indigo-purple"
+              <label for="siteCode" class="mb-1 text-sm font-bold text-at-indigo-purple"
                 >Site Code</label
               >
               <input
@@ -205,7 +205,7 @@
               <p v-else>{{ item.siteCode }}</p>
             </div>
             <div class="flex flex-col flex-2 ">
-              <label for="bandwidth" class="mb-1 ext-sm text-at-indigo-purple"
+              <label for="bandwidth" class="mb-1 text-sm font-bold text-at-indigo-purple"
                 >Bandwith</label
               >
               <select
@@ -249,7 +249,7 @@
             :key="index"
           >
             <div class="flex flex-col flex-2 md:w-1/3">
-              <label for="siteName" class="mb-1 text-sm text-at-indigo-purple"
+              <label for="siteName" class="mb-1 text-sm font-bold text-at-indigo-purple"
                 >Site Name</label
               >
               <input
@@ -261,7 +261,7 @@
               <p v-else>{{ item.siteName }}</p>
             </div>
             <div class="flex flex-col flex-2 ">
-              <label for="contractor" class="mb-1 text-sm text-at-indigo-purple"
+              <label for="contractor" class="mb-1 text-sm font-bold text-at-indigo-purple"
                 >Contractor</label
               >
               <select
@@ -280,7 +280,7 @@
             <div class="flex flex-col flex-2 ">
               <label
                 for="activationDate"
-                class="mb-1 ext-sm text-at-indigo-purple"
+                class="mb-1 font-bold ext-sm text-at-indigo-purple"
                 >Activation Date</label
               >
               <input
@@ -296,7 +296,7 @@
               <p v-else>{{ item.activationDate }}</p>
             </div>
             <div class="flex flex-col flex-2 ">
-              <label for="siteCode" class="mb-1 text-sm text-at-indigo-purple"
+              <label for="siteCode" class="mb-1 text-sm font-bold text-at-indigo-purple"
                 >Site Code</label
               >
               <input
@@ -309,7 +309,7 @@
               <p v-else>{{ item.siteCode }}</p>
             </div>
             <div class="flex flex-col flex-2 ">
-              <label for="bandwidth" class="mb-1 ext-sm text-at-indigo-purple"
+              <label for="bandwidth" class="mb-1 font-bold ext-sm text-at-indigo-purple"
                 >Bandwith</label
               >
               <select
@@ -329,8 +329,8 @@
               <p v-else>{{ item.bandwidth }}</p>
             </div>
             <div class="flex flex-col flex-2 ">
-              <label for="bandwidth" class="mb-1 ext-sm text-at-indigo-purple"
-                >Bandwith</label
+              <label for="bandwidth" class="mb-1 font-bold ext-sm text-at-indigo-purple"
+                >Service</label
               >
               <select
                 v-if="edit"
@@ -342,7 +342,7 @@
                 <option value="Internet">Internet</option>
                 <option value="Wan">Wan</option>
               </select>
-              <p v-else>{{ item.bandwidth }}</p>
+              <p v-else>{{ item.service }}</p>
             </div>
             <img
               @click="deleteSite(item.id)"

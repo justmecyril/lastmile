@@ -5,17 +5,17 @@
       v-if="statusMsg || errorMsg"
       class="p-4 mb-10 rounded-md shadow-lg bg-light-grey"
     >
-      <p class="text-at-light-green">{{ statusMsg }}</p>
+      <p class="text-at-indigo-purple">{{ statusMsg }}</p>
       <p class="text-red-500">{{ errorMsg }}</p>
     </div>
     <!-- Create -->
     <div class="flex items-start p-8 rounded-md shadow-lg bg-light-grey">
       <!-- Form -->
       <form @submit.prevent="addClient" class="flex flex-col w-full gap-y-5">
-        <h1 class="text-2xl text-at-light-green">Setup New Client</h1>
+        <h1 class="text-2xl text-at-indigo-purple">Setup New Client</h1>
 
         <div class="flex flex-col">
-          <label for="clientName" class="mb-1 text-sm text-at-light-green"
+          <label for="clientName" class="mb-1 text-sm text-at-indigo-purple"
             >Client Name</label
           >
           <input
@@ -27,7 +27,7 @@
           />
         </div>
         <div class="flex flex-col">
-          <label for="address" class="mb-1 text-sm text-at-light-green"
+          <label for="address" class="mb-1 text-sm text-at-indigo-purple"
             >Address</label
           >
           <input
@@ -39,7 +39,7 @@
           />
         </div>
         <div class="flex flex-col">
-          <label for="contactPerson" class="mb-1 text-sm text-at-light-green"
+          <label for="contactPerson" class="mb-1 text-sm text-at-indigo-purple"
             >Contact Person</label
           >
           <input
@@ -51,7 +51,7 @@
           />
         </div>
         <div class="flex flex-col">
-          <label for="contactEmail" class="mb-1 text-sm text-at-light-green"
+          <label for="contactEmail" class="mb-1 text-sm text-at-indigo-purple"
             >Contact Email</label
           >
           <input
@@ -63,7 +63,7 @@
           />
         </div>
         <div class="flex flex-col ">
-          <label for="contact" class="mb-1 text-sm text-at-light-green"
+          <label for="contact" class="mb-1 text-sm text-at-indigo-purple"
             >Contact</label
           >
           <input
@@ -75,7 +75,7 @@
           />
         </div>
         <div class="flex flex-col ">
-          <label for="paymentTerms" class="mb-1 text-sm text-at-light-green"
+          <label for="paymentTerms" class="mb-1 text-sm text-at-indigo-purple"
             >Payment Terms</label
           >
           <select
@@ -90,7 +90,7 @@
           </select>
         </div>
         <div class="flex flex-col">
-          <label for="paymentMode" class="mb-1 text-sm text-at-light-green"
+          <label for="paymentMode" class="mb-1 text-sm text-at-indigo-purple"
             >Payment Mode</label
           >
           <select
@@ -106,7 +106,7 @@
           </select>
         </div>
         <div class="flex flex-col">
-          <label for="service" class="mb-1 text-sm text-at-light-green"
+          <label for="service" class="mb-1 text-sm text-at-indigo-purple"
             >Type of Service</label
           >
           <select
@@ -158,7 +158,7 @@
             <div class="flex flex-col flex-1">
               <label
                 for="activationDate"
-                class="mb-1 text-sm text-at-light-green"
+                class="mb-1 text-sm text-at-indigo-purple"
                 >Activation Date</label
               >
               <input
@@ -172,7 +172,7 @@
               />
             </div>
             <div class="flex flex-col flex-1 ">
-              <label for="siteCode" class="mb-1 text-sm text-at-light-green"
+              <label for="siteCode" class="mb-1 text-sm text-at-indigo-purple"
                 >Site Code</label
               >
               <input
@@ -183,7 +183,7 @@
               />
             </div>
             <div class="flex flex-col flex-1">
-              <label for="service" class="mb-1 text-sm text-at-light-green"
+              <label for="service" class="mb-1 text-sm text-at-indigo-purple"
                 >Service</label
               >
               <select
@@ -197,7 +197,7 @@
               </select>
             </div>
             <div class="flex flex-col flex-1">
-              <label for="bandwidth" class="mb-1 text-sm text-at-light-green"
+              <label for="bandwidth" class="mb-1 text-sm text-at-indigo-purple"
                 >Bandwidth</label
               >
               <select
@@ -224,7 +224,7 @@
           <button
             @click="addSite"
             type="button"
-            class="self-start px-6 py-2 mt-6 text-sm text-white duration-200 border-2 border-transparent border-solid rounded-sm bg-at-light-green hover:border-at-light-green hover:bg-white hover:text-at-light-green"
+            class="self-start px-6 py-2 mt-6 text-sm text-white duration-200 border-2 border-transparent border-solid rounded-sm bg-at-indigo-purple hover:border-at-indigo-purple hover:bg-white hover:text-at-indigo-purple"
           >
             Add Site
           </button>
@@ -238,7 +238,7 @@
             :key="index"
           >
             <div class="flex flex-col md:w-1/3">
-              <label for="siteName" class="mb-1 text-sm text-at-light-green"
+              <label for="siteName" class="mb-1 text-sm text-at-indigo-purple"
                 >Site Name</label
               >
               <input
@@ -249,7 +249,7 @@
               />
             </div>
             <div class="flex flex-col flex-1">
-              <label for="contractor" class="mb-1 text-sm text-at-light-green"
+              <label for="contractor" class="mb-1 text-sm text-at-indigo-purple"
                 >Contractor</label
               >
               <select
@@ -266,7 +266,7 @@
             <div class="flex flex-col flex-1">
               <label
                 for="activationDate"
-                class="mb-1 text-sm text-at-light-green"
+                class="mb-1 text-sm text-at-indigo-purple"
                 >Activation Date</label
               >
               <input
@@ -280,7 +280,7 @@
               />
             </div>
             <div class="flex flex-col flex-1 ">
-              <label for="siteCode" class="mb-1 text-sm text-at-light-green"
+              <label for="siteCode" class="mb-1 text-sm text-at-indigo-purple"
                 >Site Code</label
               >
               <input
@@ -292,7 +292,7 @@
             </div>
 
             <div class="flex flex-col flex-1">
-              <label for="bandwidth" class="mb-1 text-sm text-at-light-green"
+              <label for="bandwidth" class="mb-1 text-sm text-at-indigo-purple"
                 >Bandwidth</label
               >
               <select
@@ -319,14 +319,14 @@
           <button
             @click="addSite"
             type="button"
-            class="self-start px-6 py-2 mt-6 text-sm text-white duration-200 border-2 border-transparent border-solid rounded-sm bg-at-light-green hover:border-at-light-green hover:bg-white hover:text-at-light-green"
+            class="self-start px-6 py-2 mt-6 text-sm text-white duration-200 border-2 border-transparent border-solid rounded-sm bg-at-indigo-purple hover:border-at-indigo-purple hover:bg-white hover:text-at-indigo-purple"
           >
             Add Site
           </button>
         </div>
         <button
           type="submit"
-          class="self-start px-6 py-2 mt-6 text-sm text-white duration-200 border-2 border-transparent border-solid rounded-sm bg-at-light-green hover:border-at-light-green hover:bg-white hover:text-at-light-green"
+          class="self-start px-6 py-2 mt-6 text-sm text-white duration-200 border-2 border-transparent border-solid rounded-sm bg-at-indigo-purple hover:border-at-indigo-purple hover:bg-white hover:text-at-indigo-purple"
         >
           Add Client
         </button>

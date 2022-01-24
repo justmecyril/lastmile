@@ -1,5 +1,5 @@
 <template>
-  <header class="text-white bg-at-light-green">
+  <header class="text-white bg-at-indigo-purple">
     <nav
       class="container flex flex-col items-center gap-4 px-4 py-5 sm:flex-row"
     >

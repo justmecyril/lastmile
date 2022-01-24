@@ -4,7 +4,7 @@
     <div v-if="data.length === 0" class="flex flex-col items-center w-full">
       <h1 class="text-2xl">No Data found...</h1>
       <router-link
-        class="px-6 py-2 mt-6 text-sm text-white duration-200 border-2 border-transparent border-solid rounded-sm bg-at-light-green hover:border-at-light-green hover:bg-white hover:text-at-light-green"
+        class="px-6 py-2 mt-6 text-sm text-white duration-200 border-2 border-transparent border-solid rounded-sm bg-at-indigo-purple hover:border-at-indigo-purple hover:bg-white hover:text-at-indigo-purple"
         :to="{ name: 'Create' }"
         >Add Client</router-link
       >
@@ -17,7 +17,7 @@
     >
       <router-link
         class="flex flex-col items-center p-8 shadow-md cursor-pointer f fle-col bg-light-grey"
-        :to="{ name: 'ClientDetails', params: { clientId: client.id} }"
+        :to="{ name: 'ClientDetails', params: { clientId: client.id } }"
         v-for="(client, index) in data"
         :key="index"
       >
@@ -29,15 +29,15 @@
         />
 
         <!-- Wan and Internet Img -->
-        <img v-else src="@/assets/images/wan.svg" /> 
+        <img v-else src="@/assets/images/wan.svg" />
 
         <p
-          class="px-3 py-1 mt-6 text-sm text-white rounded-lg shadow-md bg-at-light-green"
+          class="px-3 py-1 mt-6 text-sm text-white rounded-lg shadow-md bg-at-purple"
         >
           {{ client.service }}
         </p>
 
-        <h1 class="mt-8 mb-2 text-xl text-center text-at-light-green">
+        <h1 class="mt-8 mb-2 text-xl text-center text-at-indigo-purple">
           {{ client.clientName }}
         </h1>
       </router-link>

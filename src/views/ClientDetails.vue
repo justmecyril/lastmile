@@ -2,9 +2,9 @@
   <div class="max-w-screen-xl px-4 py-10 mx-auto">
     <div
       v-if="statusMsg || errorMsg"
-      class="p-4 mb-10 rounded-md shadow-md bg-light-green"
+      class="p-4 mb-10 rounded-md shadow-md bg-indigo-purple"
     >
-      <p class="text-at-light-green">{{ statusMsg }}</p>
+      <p class="text-at-indigo-purple">{{ statusMsg }}</p>
       <p class="text-red-500">{{ errorMsg }}</p>
     </div>
 
@@ -16,13 +16,13 @@
         <div v-if="user" class="absolute flex left-2 top-2 gap-x-2">
           <div
             @click="editMode"
-            class="flex items-center justify-center rounded-full shadow cursor-pointer w-7 h-7 bg-at-light-green"
+            class="flex items-center justify-center rounded-full shadow cursor-pointer w-7 h-7 bg-at-purple"
           >
             <img class="w-auto h-3" src="@/assets/images/w-pencil.svg" />
           </div>
           <div
             @click="deleteClient"
-            class="flex items-center justify-center rounded-full shadow cursor-pointer h-7 w-7 bg-at-light-green"
+            class="flex items-center justify-center rounded-full shadow cursor-pointer h-7 w-7 bg-at-purple"
           >
             <img class="w-auto h-3" src="@/assets/images/w-trash.svg" />
           </div>
@@ -34,7 +34,7 @@
         />
         <img v-else class="w-auto h-24" src="@/assets/images/wan.svg" />
         <span
-          class="px-5 py-1 mt-6 text-xs text-white rounded-lg shadow-md 5 bg-at-light-green"
+          class="px-5 py-1 mt-6 text-xs text-white rounded-lg shadow-md 5 bg-at-purple"
           >{{ data.service }}</span
         >
         <div class="w-1/2 mt-6">
@@ -44,7 +44,7 @@
             class="w-full p-2 text-gray-500 focus:outline-none"
             v-model="data.clientName"
           />
-          <h1 v-else class="text-xl text-center text-at-light-green">
+          <h1 v-else class="text-xl text-center text-at-indigo-purple">
             {{ data.clientName }}
           </h1>
         </div>
@@ -56,7 +56,7 @@
             class="w-full p-2 text-gray-500 focus:outline-none"
             v-model="data.address"
           />
-          <h1 v-else class="text-xl text-center text-at-light-green">
+          <h1 v-else class="text-xl text-center text-at-indigo-purple">
             {{ data.address }}
           </h1>
         </div>
@@ -67,7 +67,7 @@
             class="w-full p-2 text-gray-500 focus:outline-none"
             v-model="data.contactPerson"
           />
-          <h1 v-else class="text-xl text-center text-at-light-green">
+          <h1 v-else class="text-xl text-center text-at-indigo-purple">
             {{ data.contactPerson }}
           </h1>
         </div>
@@ -80,7 +80,10 @@
               class="w-full p-2 text-gray-500 focus:outline-none"
               v-model="data.contactEmail"
             />
-            <h1 v-else class="relative text-xl text-center text-at-light-green">
+            <h1
+              v-else
+              class="relative text-xl text-center text-at-indigo-purple"
+            >
               {{ data.contactEmail }}
             </h1>
           </div>
@@ -91,14 +94,14 @@
               class="w-full p-2 text-gray-500 focus:outline-none"
               v-model="data.contact"
             />
-            <h1 v-else class="text-xl text-center text-at-light-green">
+            <h1 v-else class="text-xl text-center text-at-indigo-purple">
               {{ data.contact }}
             </h1>
           </div>
         </div>
         <div class="flex">
           <div class="inline-block w-full mt-6 mr-6">
-             <select
+            <select
               v-if="edit"
               type="text"
               class="w-full p-2 text-gray-500 focus:outline-none "
@@ -107,7 +110,7 @@
               <option value="Monthly">Monthly</option>
               <option value="Quartely">Quartely</option>
             </select>
-            <h1 v-else class="text-xl text-center text-at-light-green">
+            <h1 v-else class="text-xl text-center text-at-indigo-purple">
               {{ data.paymentTerms }}
             </h1>
           </div>
@@ -122,7 +125,7 @@
               <option value="Cheque">Cheque</option>
               <option value="Transfer">Transfer</option>
             </select>
-            <h1 v-else class="text-xl text-center text-at-light-green">
+            <h1 v-else class="text-xl text-center text-at-indigo-purple">
               {{ data.paymentMode }}
             </h1>
           </div>
@@ -142,7 +145,7 @@
             :key="index"
           >
             <div class="flex flex-col flex-2 md:w-1/3">
-              <label for="siteName" class="mb-1 text-sm text-at-light-green"
+              <label for="siteName" class="mb-1 text-sm text-at-indigo-purple"
                 >Site Name</label
               >
               <input
@@ -154,7 +157,7 @@
               <p v-else>{{ item.siteName }}</p>
             </div>
             <div class="flex flex-col flex-2 ">
-              <label for="contractor" class="mb-1 text-sm text-at-light-green"
+              <label for="contractor" class="mb-1 text-sm text-at-indigo-purple"
                 >Contractor</label
               >
               <select
@@ -173,7 +176,7 @@
             <div class="flex flex-col flex-2 ">
               <label
                 for="activationDate"
-                class="mb-1 ext-sm text-at-light-green"
+                class="mb-1 ext-sm text-at-indigo-purple"
                 >Activation Date</label
               >
               <input
@@ -189,7 +192,7 @@
               <p v-else>{{ item.activationDate }}</p>
             </div>
             <div class="flex flex-col flex-2 ">
-              <label for="siteCode" class="mb-1 text-sm text-at-light-green"
+              <label for="siteCode" class="mb-1 text-sm text-at-indigo-purple"
                 >Site Code</label
               >
               <input
@@ -202,7 +205,7 @@
               <p v-else>{{ item.siteCode }}</p>
             </div>
             <div class="flex flex-col flex-2 ">
-              <label for="bandwidth" class="mb-1 ext-sm text-at-light-green"
+              <label for="bandwidth" class="mb-1 ext-sm text-at-indigo-purple"
                 >Bandwith</label
               >
               <select
@@ -232,7 +235,7 @@
             @click="addSite"
             v-if="edit"
             type="button"
-            class="self-start px-6 py-2 mt-6 text-sm text-white duration-200 border-2 border-transparent border-solid rounded-sm bg-at-light-green hover:border-at-light-green hover:bg-white hover:text-at-light-green"
+            class="self-start px-6 py-2 mt-6 text-sm text-white duration-200 border-2 border-transparent border-solid rounded-sm bg-at-indigo-purple hover:border-at-indigo-purple hover:bg-white hover:text-at-at-indigo-purple"
           >
             Add Site
           </button>
@@ -246,7 +249,7 @@
             :key="index"
           >
             <div class="flex flex-col flex-2 md:w-1/3">
-              <label for="siteName" class="mb-1 text-sm text-at-light-green"
+              <label for="siteName" class="mb-1 text-sm text-at-indigo-purple"
                 >Site Name</label
               >
               <input
@@ -258,7 +261,7 @@
               <p v-else>{{ item.siteName }}</p>
             </div>
             <div class="flex flex-col flex-2 ">
-              <label for="contractor" class="mb-1 text-sm text-at-light-green"
+              <label for="contractor" class="mb-1 text-sm text-at-indigo-purple"
                 >Contractor</label
               >
               <select
@@ -277,7 +280,7 @@
             <div class="flex flex-col flex-2 ">
               <label
                 for="activationDate"
-                class="mb-1 ext-sm text-at-light-green"
+                class="mb-1 ext-sm text-at-indigo-purple"
                 >Activation Date</label
               >
               <input
@@ -293,7 +296,7 @@
               <p v-else>{{ item.activationDate }}</p>
             </div>
             <div class="flex flex-col flex-2 ">
-              <label for="siteCode" class="mb-1 text-sm text-at-light-green"
+              <label for="siteCode" class="mb-1 text-sm text-at-indigo-purple"
                 >Site Code</label
               >
               <input
@@ -306,7 +309,7 @@
               <p v-else>{{ item.siteCode }}</p>
             </div>
             <div class="flex flex-col flex-2 ">
-              <label for="bandwidth" class="mb-1 ext-sm text-at-light-green"
+              <label for="bandwidth" class="mb-1 ext-sm text-at-indigo-purple"
                 >Bandwith</label
               >
               <select
@@ -326,7 +329,7 @@
               <p v-else>{{ item.bandwidth }}</p>
             </div>
             <div class="flex flex-col flex-2 ">
-              <label for="bandwidth" class="mb-1 ext-sm text-at-light-green"
+              <label for="bandwidth" class="mb-1 ext-sm text-at-indigo-purple"
                 >Bandwith</label
               >
               <select
@@ -352,7 +355,7 @@
             v-if="edit"
             @click="addSite"
             type="button"
-            class="self-start px-6 py-2 mt-6 text-sm text-white duration-200 border-2 border-transparent border-solid rounded-sm bg-at-light-green hover:border-at-light-green hover:bg-white hover:text-at-light-green"
+            class="self-start px-6 py-2 mt-6 text-sm text-white duration-200 border-2 border-transparent border-solid rounded-sm bg-at-indigo-purple hover:border-at-indigo-purple hover:bg-white hover:text-at-indigo-purple"
           >
             Add Site
           </button>
@@ -364,7 +367,7 @@
         @click="updateClient"
         v-if="edit"
         type="button"
-        class="self-start px-6 py-2 mt-10 text-sm text-white duration-200 border-2 border-transparent border-solid rounded-sm bg-at-light-green hover:border-at-light-green hover:bg-white hover:text-at-light-green"
+        class="self-start px-6 py-2 mt-10 text-sm text-white duration-200 border-2 border-transparent border-solid rounded-sm bg-at-indigo-purple hover:border-at-indigo-purple hover:bg-white hover:text-at-indigo-purple"
       >
         Update Client
       </button>

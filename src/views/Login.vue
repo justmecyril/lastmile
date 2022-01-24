@@ -10,10 +10,10 @@
       @submit.prevent="login"
       class="flex flex-col p-8 rounded-md shadow-lg bg-light-grey"
     >
-      <h1 class="mb-4 text-3xl text-at-light-green">Login</h1>
+      <h1 class="mb-4 text-3xl text-at-indigo-purple">Login</h1>
 
       <div class="flex flex-col mb-2">
-        <label for="email" class="mb-1 text-sm text-at-light-green"
+        <label for="email" class="mb-1 text-sm text-at-indigo-purple"
           >Email</label
         >
         <input
@@ -26,7 +26,7 @@
       </div>
 
       <div class="flex flex-col mb-2">
-        <label for="password" class="mb-1 text-sm text-at-light-green"
+        <label for="password" class="mb-1 text-sm text-at-indigo-purple"
           >Password</label
         >
         <input
@@ -40,13 +40,14 @@
 
       <button
         type="submit"
-        class="self-start px-6 py-2 mt-6 text-sm text-white duration-200 border-2 border-transparent border-solid rounded-sm bg-at-light-green hover:border-at-light-green hover:bg-white hover:text-at-light-green"
+        class="self-start px-6 py-2 mt-6 text-sm text-white duration-200 border-2 border-transparent border-solid rounded-sm bg-at-indigo-purple hover:border-at-indigo-purple hover:bg-white hover:text-at-indigo-purple"
       >
         Login
       </button>
 
       <router-link class="mt-6 text-sm text-center" :to="{ name: 'Register' }">
-        Don't have an account? <span class="text-at-light-green">Register</span>
+        Don't have an account?
+        <span class="text-at-indigo-purple">Register</span>
       </router-link>
     </form>
   </div>

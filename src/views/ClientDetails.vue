@@ -34,17 +34,23 @@
         />
         <img v-else class="w-auto h-24" src="@/assets/images/wan.svg" />
         <span
-          class="px-5 py-1 mt-6 text-xs text-white rounded-lg shadow-md 5 bg-at-purple"
+          class="px-5 py-1 mt-6 text-xs text-white rounded-lg shadow-md bg-at-purple"
           >{{ data.service }}</span
         >
+
         <div class="w-1/2 mt-6">
           <input
             v-if="edit"
             type="text"
-            class="w-full p-2 text-gray-500 focus:outline-none"
+            class="w-full p-2 text-center text-gray-500 bg-transparent border-b-2 outline-none focus:outline-none"
             v-model="data.clientName"
           />
-          <h1 v-else class="text-xl text-center text-at-indigo-purple">
+
+          <h1
+            v-else
+            class="px-5 py-1 mt-6 text-xs text-center text-white rounded-lg shadow-md bg-at-purple"
+          >
+            <span class="inline-block w-2 h-2 mr-2 rounded-full bg-"></span>
             {{ data.clientName }}
           </h1>
         </div>
@@ -53,10 +59,14 @@
           <input
             v-if="edit"
             type="text"
-            class="w-full p-2 text-gray-500 focus:outline-none"
+            class="w-full p-2 text-center text-gray-500 bg-transparent border-b-2 outline-none focus:outline-none"
             v-model="data.address"
           />
-          <h1 v-else class="text-xl text-center text-at-indigo-purple">
+
+          <h1
+            v-else
+            class="px-5 py-1 mt-6 text-xs text-center text-white rounded-lg shadow-md bg-at-purple"
+          >
             {{ data.address }}
           </h1>
         </div>
@@ -64,10 +74,13 @@
           <input
             v-if="edit"
             type="text"
-            class="w-full p-2 text-gray-500 focus:outline-none"
+            class="w-full p-2 text-center text-gray-500 bg-transparent border-b-2 outline-none focus:outline-none"
             v-model="data.contactPerson"
           />
-          <h1 v-else class="text-xl text-center text-at-indigo-purple">
+          <h1
+            v-else
+            class="px-5 py-1 mt-6 text-xs text-center text-white rounded-lg shadow-md bg-at-purple"
+          >
             {{ data.contactPerson }}
           </h1>
         </div>
@@ -77,12 +90,12 @@
             <input
               v-if="edit"
               type="text"
-              class="w-full p-2 text-gray-500 focus:outline-none"
+              class="w-full p-2 ml-5 text-gray-500 bg-transparent border-b-2 outline-none focus:outline-none"
               v-model="data.contactEmail"
             />
             <h1
               v-else
-              class="relative text-xl text-center text-at-indigo-purple"
+              class="px-5 py-1 mt-6 text-xs text-center text-white rounded-lg shadow-md bg-at-purple"
             >
               {{ data.contactEmail }}
             </h1>
@@ -91,10 +104,13 @@
             <input
               v-if="edit"
               type="text"
-              class="w-full p-2 text-gray-500 focus:outline-none"
+              class="w-full p-2 ml-1 text-gray-500 bg-transparent border-b-2 outline-none focus:outline-none"
               v-model="data.contact"
             />
-            <h1 v-else class="text-xl text-center text-at-indigo-purple">
+            <h1
+              v-else
+              class="px-5 py-1 mt-6 text-xs text-center text-white rounded-lg shadow-md bg-at-purple"
+            >
               {{ data.contact }}
             </h1>
           </div>
@@ -104,13 +120,16 @@
             <select
               v-if="edit"
               type="text"
-              class="w-full p-2 text-gray-500 focus:outline-none "
+              class="w-full p-2 text-gray-500 bg-transparent border-b-2 outline-none focus:outline-none"
               v-model="data.paymentTerms"
             >
               <option value="Monthly">Monthly</option>
               <option value="Quartely">Quartely</option>
             </select>
-            <h1 v-else class="text-xl text-center text-at-indigo-purple">
+            <h1
+              v-else
+              class="px-5 py-1 mt-6 text-xs text-center text-white rounded-lg shadow-md bg-at-purple"
+            >
               {{ data.paymentTerms }}
             </h1>
           </div>
@@ -118,14 +137,17 @@
             <select
               v-if="edit"
               type="text"
-              class="w-full p-2 text-gray-500 focus:outline-none "
+              class="w-full p-2 text-gray-500 bg-transparent border-b-2 outline-none focus:outline-none"
               v-model="data.paymentMode"
             >
               <option value="Cash">Cash</option>
               <option value="Cheque">Cheque</option>
               <option value="Transfer">Transfer</option>
             </select>
-            <h1 v-else class="text-xl text-center text-at-indigo-purple">
+            <h1
+              v-else
+              class="px-5 py-1 mt-6 text-xs text-center text-white rounded-lg shadow-md bg-at-purple"
+            >
               {{ data.paymentMode }}
             </h1>
           </div>
@@ -145,7 +167,9 @@
             :key="index"
           >
             <div class="flex flex-col flex-2 md:w-1/3">
-              <label for="siteName" class="mb-1 text-sm font-bold text-at-indigo-purple"
+              <label
+                for="siteName"
+                class="mb-1 text-sm font-bold text-at-indigo-purple"
                 >Site Name</label
               >
               <input
@@ -157,7 +181,9 @@
               <p v-else>{{ item.siteName }}</p>
             </div>
             <div class="flex flex-col flex-2 ">
-              <label for="contractor" class="mb-1 text-sm font-bold text-at-indigo-purple"
+              <label
+                for="contractor"
+                class="mb-1 text-sm font-bold text-at-indigo-purple"
                 >Contractor</label
               >
               <select
@@ -192,7 +218,9 @@
               <p v-else>{{ item.activationDate }}</p>
             </div>
             <div class="flex flex-col flex-2 ">
-              <label for="siteCode" class="mb-1 text-sm font-bold text-at-indigo-purple"
+              <label
+                for="siteCode"
+                class="mb-1 text-sm font-bold text-at-indigo-purple"
                 >Site Code</label
               >
               <input
@@ -205,7 +233,9 @@
               <p v-else>{{ item.siteCode }}</p>
             </div>
             <div class="flex flex-col flex-2 ">
-              <label for="bandwidth" class="mb-1 text-sm font-bold text-at-indigo-purple"
+              <label
+                for="bandwidth"
+                class="mb-1 text-sm font-bold text-at-indigo-purple"
                 >Bandwith</label
               >
               <select
@@ -249,7 +279,9 @@
             :key="index"
           >
             <div class="flex flex-col flex-2 md:w-1/3">
-              <label for="siteName" class="mb-1 text-sm font-bold text-at-indigo-purple"
+              <label
+                for="siteName"
+                class="mb-1 text-sm font-bold text-at-indigo-purple"
                 >Site Name</label
               >
               <input
@@ -261,7 +293,9 @@
               <p v-else>{{ item.siteName }}</p>
             </div>
             <div class="flex flex-col flex-2 ">
-              <label for="contractor" class="mb-1 text-sm font-bold text-at-indigo-purple"
+              <label
+                for="contractor"
+                class="mb-1 text-sm font-bold text-at-indigo-purple"
                 >Contractor</label
               >
               <select
@@ -296,7 +330,9 @@
               <p v-else>{{ item.activationDate }}</p>
             </div>
             <div class="flex flex-col flex-2 ">
-              <label for="siteCode" class="mb-1 text-sm font-bold text-at-indigo-purple"
+              <label
+                for="siteCode"
+                class="mb-1 text-sm font-bold text-at-indigo-purple"
                 >Site Code</label
               >
               <input
@@ -309,7 +345,9 @@
               <p v-else>{{ item.siteCode }}</p>
             </div>
             <div class="flex flex-col flex-2 ">
-              <label for="bandwidth" class="mb-1 font-bold ext-sm text-at-indigo-purple"
+              <label
+                for="bandwidth"
+                class="mb-1 font-bold ext-sm text-at-indigo-purple"
                 >Bandwith</label
               >
               <select
@@ -329,7 +367,9 @@
               <p v-else>{{ item.bandwidth }}</p>
             </div>
             <div class="flex flex-col flex-2 ">
-              <label for="bandwidth" class="mb-1 font-bold ext-sm text-at-indigo-purple"
+              <label
+                for="bandwidth"
+                class="mb-1 font-bold ext-sm text-at-indigo-purple"
                 >Service</label
               >
               <select

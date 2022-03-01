@@ -113,7 +113,7 @@
             class="p-2 text-gray-500 focus:outline-none"
             id="service"
             required
-            @change="serviceChange"
+            
             v-model="service"
           >
             <option value="">Select Type of Service</option>
@@ -158,7 +158,7 @@
             <div class="flex flex-col flex-1">
               <label
                 for="activationDate"
-                class="mb-1 text-sm text-at-indigo-purple"
+                class="mb-1 text-sm text-at-indigo-purple" 
                 >Activation Date</label
               >
               <input

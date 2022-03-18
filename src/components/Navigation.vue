@@ -1,26 +1,25 @@
 <template>
-    <header class="text-white bg-at-indigo-purple">
-      <nav
-        class="container flex flex-col items-center gap-4 px-4 py-5 sm:flex-row"
-      >
-        <div class="flex items-center gap-x-4">
-          <img class="w-20" src="../assets/images/logo.png" alt="" />
-          <h1 class="text-lg">LaStMiLe</h1>
-        </div>
-        <ul class="flex justify-end flex-1 gap-x-10">
-          <router-link class="cursor-pointer" :to="{ name: 'Home' }"
-            >Home</router-link
-          >
-          <router-link v-if="user" class="cursor-pointer" :to="{ name: 'Create' }"
-            >Create</router-link
-          >
-          <router-link v-if="!user" class="cursor-pointer" :to="{ name: 'Login' }"
-            >Login</router-link
-          >
-          <li v-if="user" @click="logout" class="cursor-pointer">Logout</li>
-        </ul>
-      </nav>
-    </header>
+  <header class="text-white bg-at-indigo-purple">
+    <nav
+      class="container flex flex-col items-center gap-4 px-4 py-5 sm:flex-row"
+    >
+      <div class="flex items-center gap-x-4">
+        <img class="w-20" src="../assets/images/logo.png" alt="" />
+        <router-link class="cursor-pointer" :to="{ name: 'Home' }"
+          >LastMile</router-link
+        >
+      </div>
+      <ul class="flex justify-end flex-1 gap-x-10">
+        <router-link v-if="user" class="cursor-pointer" :to="{ name: 'Create' }"
+          >Create</router-link
+        >
+        <router-link v-if="!user" class="cursor-pointer" :to="{ name: 'Login' }"
+          >Login</router-link
+        >
+        <li v-if="user" @click="logout" class="cursor-pointer">Logout</li>
+      </ul>
+    </nav>
+  </header>
 </template>
 
 <script>
